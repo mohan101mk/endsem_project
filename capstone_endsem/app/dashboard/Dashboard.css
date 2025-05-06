@@ -1,0 +1,38 @@
+.dashboard-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
+}
+
+.dashboard-box{
+    flex: 1;
+    height: 150px;
+    background-color: aliceblue;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.dashboard-wrapper {
+    padding: 40px;
+}
+
+.box-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.box-divider {
+    border: none;
+    border-top: 1.5px solid #ccc;
+    margin-bottom: 8px;
+}
+
+
+.box-content {
+    font-size: 14px;
+    color: #555;
+  }
+
+  
