@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import styles from './LoginPage.module.css'; // Import the CSS module
+import  './login.css'; // Import the CSS module
 
 export default function LoginPage() {
   const router = useRouter();
@@ -31,8 +31,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className={styles['login-container']}>
-      <h2 className={styles['login-title']}>Login</h2>
+    <div className='login-container'>
+      <h2 className='login-title' >Login</h2>
       <form onSubmit={handleLogin}>
         <input
           type="text"
@@ -40,7 +40,7 @@ export default function LoginPage() {
           placeholder="Full Name"
           value={userData.fullName}
           onChange={handleChange}
-          className={styles['input-box']}
+          className='input-box'
           required
         />
         <input
@@ -49,7 +49,7 @@ export default function LoginPage() {
           placeholder="Email"
           value={userData.email}
           onChange={handleChange}
-          className={styles['input-box']}
+          className='input-box'
           required
         />
         <input
@@ -58,10 +58,10 @@ export default function LoginPage() {
           placeholder="Password"
           value={userData.password}
           onChange={handleChange}
-          className={styles['input-box']}
+          className='input-box'
           required
         />
-        <button type="submit" className={styles['login-button']}>
+        <button type="submit" className='login-button'>
           Login
         </button>
       </form>

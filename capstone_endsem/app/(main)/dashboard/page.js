@@ -1,6 +1,7 @@
 import './Dashboard.css'
 export default function Dashboard(){
     return (
+      <>
         <div className="dashboard-wrapper">
         <div className="dashboard-container">
           <div className="dashboard-box">
@@ -24,6 +25,16 @@ export default function Dashboard(){
             <p className="box-content">Shows no of transactions</p>
           </div>
         </div>
+        </div>
+
+      <div className='expense-div'>  
+        <h2 className='expense-title'>
+          Expense Trends
+        </h2>
+        
+        <p>Visualize spending patterns over time here.</p>
       </div>
+
+      </>
     )
 }
