@@ -1,5 +1,6 @@
 'use client'
 import Link from "next/link";
+import Image from 'next/image';
 import { usePathname } from "next/navigation";
 
 
@@ -32,8 +33,10 @@ const Navbar=()=>{
         </div>
 
         <div className="profile">
-            <Link href='/' className="nav-link">Profile</Link>
-            </div>
+            <Link href='/profile'>
+                <Image src="/profile.png" alt="Profile" className="profile-img" width={60} height={60}  />
+            </Link>
+        </div>
       </nav>
     )
 }
