@@ -33,6 +33,7 @@ const Navbar=()=>{
         </div>
 
         <div className="profile">
+            
             <Link href='/profile'>
                 <Image src="/profile.png" alt="Profile" className="profile-img" width={60} height={60}  />
             </Link>
