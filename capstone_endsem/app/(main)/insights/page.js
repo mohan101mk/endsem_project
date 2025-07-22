@@ -1,6 +1,6 @@
 
 export default function Insights(){
     return (
-        <div>Insights</div>
+        <div>Insights  </div>
     )
 }

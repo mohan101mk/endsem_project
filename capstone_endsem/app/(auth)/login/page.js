@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import  './login.css'; // Import the CSS module
+import  './login.css'; 
 
 export default function LoginPage() {
   const router = useRouter();
