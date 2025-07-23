@@ -1,0 +1,120 @@
+.calculatorContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    color: #1a237e;
+    margin-bottom: 2rem;
+  }
+  
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputGroup label {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .inputGroup input,
+  .inputGroup select {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .calculateButton {
+    grid-column: 1 / -1;
+    padding: 1rem;
+    background-color: #303f9f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .calculateButton:hover {
+    background-color: #1a237e;
+  }
+  
+  .results {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  .resultBox {
+    display: inline-block;
+    width: 45%;
+    padding: 1.5rem;
+    margin: 1rem 2%;
+    background-color: #f4f8fb;
+    border-radius: 8px;
+  }
+  
+  .resultBox h3 {
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+  }
+  
+  .resultBox p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #303f9f;
+  }
+  
+  .recommendation {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e8eaf6;
+    border: 1px solid #c5cae9;
+    border-radius: 8px;
+  }
+  
+  .recommendation h3 {
+    color: #1a237e;
+  }
+  
+  .recommendation p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  } 
+
+.fileTaxButton {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background-color: #388e3c;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(56, 142, 60, 0.08);
+}
+
+.fileTaxButton:hover {
+  background-color: #256029;
+  color: #fff;
+} 
