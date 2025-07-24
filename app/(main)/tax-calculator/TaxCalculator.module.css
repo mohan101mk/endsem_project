@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --color-primary: hsl(214, 90%, 52%);
   --color-background: hsl(0, 0%, 98%);
   --color-surface: #ffffff;
@@ -12,7 +12,7 @@
   --border-radius: 16px;
   --shadow-sm: 0 2px 4px hsla(210, 20%, 50%, 0.04);
   --shadow-md: 0 4px 12px hsla(210, 20%, 50%, 0.08);
-}
+} */
 .calculatorContainer {
   font-family: var(--font-family-sans);
   max-width: 1024px;
