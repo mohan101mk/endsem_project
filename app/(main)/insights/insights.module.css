@@ -1,0 +1,52 @@
+/* insights.module.css */
+
+/* Main container for the entire page */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Centers the container on the page */
+    padding: 2rem 1rem; /* Adds padding on the top/bottom and sides */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f7f9; /* A light, neutral background color */
+  }
+  
+  /* Styling for the main "Insights" header */
+  .header {
+    text-align: center; /* Centers the text */
+    font-size: 2.5rem; /* Makes the font larger */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2rem; /* Adds space below the header */
+  }
+  
+  /* Container for the charts */
+  .chartsContainer {
+    display: flex;
+    flex-direction: row; /* Arrange children horizontally */
+    justify-content: center; /* Center the charts in the container */
+    align-items: stretch; /* Make children have the same height */
+    gap: 2rem; /* Adds space between the two chart wrappers */
+    flex-wrap: wrap; /* Allows charts to stack on smaller screens */
+  }
+  
+  /* Wrapper for each individual chart */
+  .chartWrapper {
+    background-color: #ffffff; /* White background for the card effect */
+    border-radius: 8px; /* Rounded corners */
+    padding: 2rem; /* Padding inside the wrapper */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* A subtle shadow for depth */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    flex: 1 1 400px; /* Flex-grow, flex-shrink, and flex-basis for responsive sizing */
+    max-width: 600px; /* Set a max-width for each chart */
+  }
+  
+  /* Styling for the title of each chart (e.g., "Spending by Category") */
+  .chartWrapper h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #555;
+  }
+  

@@ -1,3 +1,6 @@
+/* Dashboard.css - Updated for graph integration in Expense Trends */
+
+/* Original styles */
 .dashboard-main-wrapper {
   background: #fff;
   min-height: 100vh;
@@ -48,26 +51,105 @@
   color: #333;
 }
 
+/* Updated Expense Trends div for graph */
 .expense-div {
   background: #fff;
   border-radius: 10px;
   padding: 24px;
   margin: 24px auto;
   width: 70%;
-  /* min-height: 200px; */
-  height: 500px;
+  height: 400px; /* Fixed height for graph; adjust as needed */
   box-shadow: 0 2px 8px rgba(25, 118, 210, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .expense-title {
   margin: 0 0 16px 0;
   font-size: 1.5rem;
   color: #1976d2;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+/* Graph-specific styles */
+.expense-div canvas {
+  width: 100% !important;
+  height: 100% !important; /* Fills the div */
+  max-height: 350px; /* Leaves space for title */
+}
+
+/* Recent Transactions (unchanged from previous) */
+.recent-transactions {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.recent-title {
+  font-size: 1.5rem;
+  color: #1976d2;
+  margin: 2rem 0 1rem 0;
+  text-align: center;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recent-item {
+  background: #f4f8fb;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recent-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.amount-positive {
+  color: green;
+  font-weight: bold;
+}
+
+.amount-negative {
+  color: red;
+  font-weight: bold;
+}
+
+/* Responsive media queries */
 @media (max-width: 900px) {
   .dashboard-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .expense-div {
+    width: 90%;
+    height: auto; /* Flexible height on mobile */
+    padding: 16px;
+  }
+
+  .expense-div canvas {
+    max-height: 250px; /* Smaller on mobile */
+  }
+
+  .recent-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 }
