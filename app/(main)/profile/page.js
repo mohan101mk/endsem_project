@@ -1,12 +1,13 @@
 import React from 'react';
+import RequireAuth from '../../components/RequireAuth';
 
-const ProfilePage = () => {
+export default function ProfilePage() {
   return (
-    <div>
-      <h1>Profile Page</h1>
-      <p>This is the  profile.</p>
-    </div>
+    <RequireAuth>
+      <div>
+        <h1>Profile Page</h1>
+        <p>This is the  profile.</p>
+      </div>
+    </RequireAuth>
   );
-};
-
-export default ProfilePage;
+}

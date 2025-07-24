@@ -1,6 +1,11 @@
+"use client";
+import RequireAuth from '../../components/RequireAuth';
 
-export default function Budget(){
-    return (
-        <div>Budget</div>
-    )
+export default function BudgetPage() {
+  return (
+    <RequireAuth>
+      {console.log("Budget Page")}
+      {/* ... existing code ... */}
+    </RequireAuth>
+  );
 }

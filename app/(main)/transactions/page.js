@@ -1,9 +1,10 @@
+import RequireAuth from '../../components/RequireAuth';
 
-export default function Transactions(){
-    return (
-        <>
-        <div>Transactions</div>
-        </>
-        
-    )
+export default function TransactionsPage() {
+  return (
+    <RequireAuth>
+      {/* Your transactions content here */}
+      {/* ... existing code ... */}
+    </RequireAuth>
+  );
 }

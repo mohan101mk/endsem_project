@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import styles from './TaxCalculator.module.css';
+import RequireAuth from '../../components/RequireAuth';
 
 const TaxCalculator = () => {
   const [grossIncome, setGrossIncome] = useState('');
@@ -155,4 +156,10 @@ const TaxCalculator = () => {
   );
 };
 
-export default TaxCalculator;
+export default function TaxCalculatorPage() {
+  return (
+    <RequireAuth>
+      <TaxCalculator />
+    </RequireAuth>
+  );
+}

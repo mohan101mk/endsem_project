@@ -40,7 +40,7 @@ export default function LandingPage() {
         <div className={styles.testimonialsGrid}>
           <TestimonialCard
             name="Amit Sharma"
-            text="SmartTax made my tax filing so easy! The comparison feature is a game changer."
+            text="FinX made my tax filing so easy! The comparison feature is a game changer."
             avatar="https://randomuser.me/api/portraits/men/32.jpg"
           />
           <TestimonialCard
@@ -50,7 +50,7 @@ export default function LandingPage() {
           />
           <TestimonialCard
             name="Rahul Singh"
-            text="I saved money by choosing the right regime, thanks to SmartTax!"
+            text="I saved money by choosing the right regime, thanks to FinX!"
             avatar="https://randomuser.me/api/portraits/men/65.jpg"
           />
         </div>

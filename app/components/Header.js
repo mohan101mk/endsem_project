@@ -5,8 +5,8 @@ const Header = () => (
   <header className={styles.header}>
     <div className={styles.logo}>FinX</div>
     <nav className={styles.nav}>
-      <Link href="/login" className={styles.button}>Login</Link>
-      <Link href="/signup" className={styles.button}>Signup</Link>
+      <Link href="/login" className={styles.button}>Join Now</Link>
+      {/* <Link href="/signup" className={styles.button}>Signup</Link> */}
     </nav>
   </header>
 );

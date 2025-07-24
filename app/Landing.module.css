@@ -5,7 +5,7 @@
   position: relative;
 }
 .herologo {
-  font-size: 4rem;
+  font-size: 6rem;
   font-family: 'Copperplate', 'Copperplate Gothic Bold', 'Geist', 'Inter', 'Segoe UI', Arial, sans-serif;
   font-weight: 800;
   color: #e53935;
@@ -18,7 +18,7 @@
 }
 .heroWelcome {
   font-size: 1.3rem;
-  color: #888;
+  color: #000000;
   margin-bottom: 0.2rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -57,7 +57,7 @@
 }
 .ctaButton {
   margin-top: 2.5rem;
-  background: #e53935;
+  background: #303f9f;
   color: #fff;
   font-size: 1.2rem;
   font-weight: 700;
@@ -70,8 +70,8 @@
   letter-spacing: 1px;
 }
 .ctaButton:hover {
-  background: #b71c1c;
-  box-shadow: 0 4px 18px rgba(229,57,53,0.15);
+  background: #2441fc;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
 }
 .testimonialsSection {
   padding: 3rem 1rem 4rem 1rem;

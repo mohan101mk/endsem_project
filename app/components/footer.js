@@ -21,7 +21,7 @@ export default function Footer() {
       <div className={styles.topRow}>
         <div className={styles.left}>
           <div className={styles.brand}>FinX</div>
-          <div className={styles.tagline}>Find your Fin, Own your X.</div>
+          <div className={styles.tagline}>Plan. Analyze. Prosper.</div>
           <div className={styles.socials}>
             {socialLinks.map(link => (
               <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.label}>

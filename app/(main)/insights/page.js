@@ -1,6 +1,10 @@
+import RequireAuth from '../../components/RequireAuth';
 
-export default function Insights(){
-    return (
-        <div>Insights  </div>
-    )
+export default function InsightsPage() {
+  return (
+    <RequireAuth>
+      {/* Your insights content here */}
+      {/* ... existing code ... */}
+    </RequireAuth>
+  );
 }

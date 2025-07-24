@@ -28,7 +28,7 @@
   padding-bottom: 2px;
 }
 .tagline {
-  color: #303f9f;
+  color: #000000;
   font-size: 1.1rem;
   margin-bottom: 1.2rem;
 }
@@ -55,8 +55,9 @@
 }
 .legalTitle {
   font-weight: 600;
-  color: #1a237e;
+  color: #000000;
   margin-bottom: 0.7rem;
+  
 }
 .legalLinks {
   list-style: none;
@@ -67,7 +68,7 @@
   margin-bottom: 0.5rem;
 }
 .legalLinks a {
-  color: #303f9f;
+  color: #000000;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.2s;
@@ -83,13 +84,13 @@
   padding-top: 1.2rem;
   border-top: 1px solid #e0e0e0;
   font-size: 1rem;
-  color: #888;
+  color: #000000;
   flex-wrap: wrap;
   gap: 1rem;
 }
 .madeFor {
   font-size: 0.98rem;
-  color: #888;
+  color: #010000;
 }
 @media (max-width: 700px) {
   .topRow {
