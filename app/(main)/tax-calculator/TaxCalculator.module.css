@@ -1,120 +1,158 @@
+:root {
+  --color-primary: hsl(214, 90%, 52%);
+  --color-background: hsl(0, 0%, 98%);
+  --color-surface: #ffffff;
+  --color-text-primary: hsl(215, 25%, 27%);
+  --color-text-secondary: hsl(210, 9%, 55%);
+  --color-border: hsl(210, 30%, 92%);
+  --color-accent-positive: hsl(145, 63%, 42%);
+  --color-accent-recommendation-bg: hsl(214, 80%, 96%);
+  --color-accent-recommendation-border: hsl(214, 80%, 88%);
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --border-radius: 16px;
+  --shadow-sm: 0 2px 4px hsla(210, 20%, 50%, 0.04);
+  --shadow-md: 0 4px 12px hsla(210, 20%, 50%, 0.08);
+}
 .calculatorContainer {
-    width: 100%;
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  .header {
-    text-align: center;
-    color: #1a237e;
-    margin-bottom: 2rem;
-  }
-  
-  .form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-  
-  .inputGroup {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .inputGroup label {
-    margin-bottom: 0.5rem;
-    color: #333;
-    font-weight: 500;
-  }
-  
-  .inputGroup input,
-  .inputGroup select {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  
-  .calculateButton {
-    grid-column: 1 / -1;
-    padding: 1rem;
-    background-color: #303f9f;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .calculateButton:hover {
-    background-color: #1a237e;
-  }
-  
-  .results {
-    margin-top: 3rem;
-    text-align: center;
-  }
-  
-  .resultBox {
-    display: inline-block;
-    width: 45%;
-    padding: 1.5rem;
-    margin: 1rem 2%;
-    background-color: #f4f8fb;
-    border-radius: 8px;
-  }
-  
-  .resultBox h3 {
-    color: #1a237e;
-    margin-bottom: 0.5rem;
-  }
-  
-  .resultBox p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #303f9f;
-  }
-  
-  .recommendation {
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: #e8eaf6;
-    border: 1px solid #c5cae9;
-    border-radius: 8px;
-  }
-  
-  .recommendation h3 {
-    color: #1a237e;
-  }
-  
-  .recommendation p {
-    font-size: 1.2rem;
-    font-weight: 500;
-  } 
-
-.fileTaxButton {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 1rem 2.5rem;
-  background-color: #388e3c;
-  color: #fff;
-  font-size: 1.2rem;
+  font-family: var(--font-family-sans);
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+.header {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.form {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.inputGroup label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+.inputGroup input,
+.inputGroup select {
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.inputGroup input:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px hsla(214, 90%, 52%, 0.2);
+}
+.calculateButton {
+  grid-column: 1 / -1;
+  padding: 14px 24px;
+  font-size: 1.1rem;
   font-weight: 600;
   border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  text-align: center;
-  transition: background 0.2s;
-  box-shadow: 0 2px 8px rgba(56, 142, 60, 0.08);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-out;
+  color: white;
+  background-color: var(--color-primary);
+  margin-top: 16px;
 }
-
-.fileTaxButton:hover {
-  background-color: #256029;
+.calculateButton:hover {
+  opacity: 0.85;
+}
+.results {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.regimeComparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.resultBox {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+.resultBox h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin: 0 0 8px 0;
+}
+.resultBox p {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+.recommendation {
+  background-color: var(--color-accent-recommendation-bg);
+  border: 1px solid var(--color-accent-recommendation-border);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  text-align: center;
+}
+.recommendation h3 {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin: 0 0 8px 0;
+}
+.recommendation p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+.fileTaxButton {
+  align-self: center;
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: var(--color-accent-positive);
   color: #fff;
-} 
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.fileTaxButton:hover {
+  opacity: 0.85;
+}
+@media (max-width: 768px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .header { font-size: 2rem; }
+  .calculatorContainer { padding: 32px 20px; }
+  .form { padding: 24px; }
+}
+@media (max-width: 600px) {
+  .regimeComparison {
+    grid-template-columns: 1fr;
+  }
+}

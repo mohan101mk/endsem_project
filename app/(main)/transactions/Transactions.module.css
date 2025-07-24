@@ -1,111 +1,132 @@
-/* app/(main)/transactions/transactions.module.css */
-.container {
-    padding: 20px;
-    max-width: 800px;
+:root {
+    --color-primary: hsl(214, 90%, 52%);
+    --color-background: hsl(0, 0%, 98%);
+    --color-surface: #ffffff;
+    --color-text-primary: hsl(215, 25%, 27%);
+    --color-text-secondary: hsl(210, 9%, 55%);
+    --color-border: hsl(210, 30%, 92%);
+    --color-accent-positive: hsl(145, 63%, 42%);
+    --color-accent-negative: hsl(0, 72%, 51%);
+    --color-accent-edit: hsl(45, 100%, 51%);
+    --color-accent-cancel: hsl(210, 9%, 45%);
+    --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px hsla(210, 20%, 50%, 0.04);
+  }
+  .container {
+    font-family: var(--font-family-sans);
+    max-width: 1024px;
     margin: 0 auto;
-}
-
-.title {
-font-size: 24px;
-font-weight: bold;
-margin-bottom: 20px;
-}
-
-.addForm {
-margin-bottom: 30px;
-padding: 20px;
-background-color: #f0f0f0;
-border-radius: 8px;
-}
-
-.formGroup {
-display: flex;
-flex-direction: column;
-gap: 15px;
-}
-
-@media (min-width: 768px) {
-.formGroup {
-    flex-direction: row;
-}
-}
-
-.input {
-padding: 10px;
-border: 1px solid #ccc;
-border-radius: 4px;
-font-size: 16px;
-}
-
-.button {
-padding: 10px 20px;
-background-color: #007bff;
-color: white;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-}
-
-.button:hover {
-background-color: #0056b3;
-}
-
-.editButton {
-background-color: #ffc107;
-}
-
-.editButton:hover {
-background-color: #e0a800;
-}
-
-.saveButton {
-background-color: #28a745;
-}
-
-.saveButton:hover {
-background-color: #218838;
-}
-
-.cancelButton {
-background-color: #6c757d;
-}
-
-.cancelButton:hover {
-background-color: #5a6268;
-}
-
-.transactionList {
-list-style: none;
-padding: 0;
-}
-
-.transactionItem {
-padding: 20px;
-background-color: white;
-border-radius: 8px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-margin-bottom: 20px;
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
-
-@media (min-width: 768px) {
-.transactionItem {
-    flex-direction: row;
+    padding: 48px 24px;
+  }
+  .title {
+    color: var(--color-text-primary);
+    font-weight: 700;
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+  }
+  .addForm {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .formGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+  }
+  .input {
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    flex-grow: 1;
+    min-width: 150px;
+  }
+  .input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px hsla(214, 90%, 52%, 0.2);
+  }
+  .button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease-out;
+    color: white;
+    background-color: var(--color-primary);
+    flex-shrink: 0;
+  }
+  .button:hover {
+    opacity: 0.85;
+  }
+  .editButton { background-color: var(--color-accent-edit); }
+  .saveButton { background-color: var(--color-accent-positive); }
+  .cancelButton { background-color: var(--color-accent-cancel); }
+  .transactionList {
+    list-style: none;
+    padding: 0;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  .transactionItem {
+    padding: 20px 24px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-}
-}
-
-.amount {
-font-weight: bold;
-}
-
-.amountNegative {
-color: red;
-}
-
-.amountPositive {
-color: green;
-}
+    gap: 20px;
+  }
+  .transactionItem:not(:last-child) {
+    border-bottom: 1px solid var(--color-border);
+  }
+  .transactionItem p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+  }
+  .transactionItem p strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
+  .amount {
+    font-size: 1rem !important;
+    text-align: right;
+  }
+  .amountNegative { color: var(--color-accent-negative) !important; }
+  .amountPositive { color: var(--color-accent-positive) !important; }
+  @media (max-width: 768px) {
+    .container {
+      padding: 32px 20px;
+    }
+    .title {
+      font-size: 2rem;
+    }
+    .formGroup > .button,
+    .formGroup > .input {
+      width: 100%;
+    }
+    .transactionItem {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .transactionItem > .button {
+      align-self: flex-end;
+    }
+  }

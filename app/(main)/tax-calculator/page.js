@@ -127,15 +127,18 @@ const TaxCalculator = () => {
       
       {recommendation && (
         <div className={styles.results}>
-          <h2>Tax Calculation Summary</h2>
-          <div className={styles.resultBox}>
-            <h3>Old Regime</h3>
-            <p>₹{oldTax.toLocaleString('en-IN')}</p>
+          
+          <div className={styles.regimeComparison}>
+            <div className={styles.resultBox}>
+              <h3>Old Regime</h3>
+              <p>₹{oldTax.toLocaleString('en-IN')}</p>
+            </div>
+            <div className={styles.resultBox}>
+              <h3>New Regime</h3>
+              <p>₹{newTax.toLocaleString('en-IN')}</p>
+            </div>
           </div>
-          <div className={styles.resultBox}>
-            <h3>New Regime</h3>
-            <p>₹{newTax.toLocaleString('en-IN')}</p>
-          </div>
+
           <div className={styles.recommendation}>
             <h3>Recommendation</h3>
             <p>{recommendation}</p>

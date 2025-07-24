@@ -1,22 +1,22 @@
-// app/(main)/budget/page.js
+
 'use client';
 
 import { useState } from 'react';
-import { useFinance } from '../layout'; // Adjust path if needed
+import { useFinance } from '../layout'; 
 import RequireAuth from '../../components/RequireAuth';
-import styles from './budget.module.css'; // Adjust path to your CSS file
+import styles from './budget.module.css'; 
 
 export default function BudgetPage() {
   const { transactions, totalBudget, updateTotalBudget } = useFinance();
   const [editBudget, setEditBudget] = useState(totalBudget);
 
-  // Calculate for current month
-  const currentMonth = new Date().toISOString().slice(0, 7); // e.g., '2025-07'
+  
+  const currentMonth = new Date().toISOString().slice(0, 7); 
   const monthlyTransactions = transactions.filter(t => t.date.slice(0, 7) === currentMonth);
   const amountSpent = monthlyTransactions.reduce((sum, t) => sum + (t.amount < 0 ? t.amount : 0), 0);
-  const amountRemaining = totalBudget + amountSpent; // Spent is negative, so add it
+  const amountRemaining = totalBudget + amountSpent; 
 
-  // Handle budget update
+  
   const handleUpdate = (e) => {
     e.preventDefault();
     updateTotalBudget(parseFloat(editBudget));
@@ -27,7 +27,7 @@ export default function BudgetPage() {
       <div className={styles.container}>
         <h1 className={styles.title}>Budget</h1>
 
-        {/* Metrics Display */}
+        
         <div className={styles.metrics}>
           <div className={styles.metricItem}>
             <p className={styles.metricLabel}>Total Budget</p>
@@ -46,7 +46,7 @@ export default function BudgetPage() {
           </div>
         </div>
 
-        {/* Edit Form */}
+        
         <form onSubmit={handleUpdate} className={styles.editForm}>
           <div className={styles.formGroup}>
             <label htmlFor="budgetInput" className={styles.metricLabel}>Update Total Budget</label>

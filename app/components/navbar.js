@@ -34,7 +34,7 @@ const Navbar=()=>{
             <Link 
                 key={href}
                 href={href}
-                className={pathname === href ? 'nav-link active-link' : 'nav-link'}
+                className={pathname === href ? 'naok prv-link active-link' : 'nav-link'}
             >
                 {label}
             </Link>

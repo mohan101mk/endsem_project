@@ -1,13 +1,13 @@
-// app/(main)/layout.js
+
 'use client';
 
 import { createContext, useContext, useState, useEffect } from 'react';
-import Navbar from '../components/navbar'; // Adjust path if needed
+import Navbar from '../components/navbar'; 
 import Footer from '../components/footer';
-import RequireAuth from '../components/RequireAuth'; // Import if using auth; adjust path
+import RequireAuth from '../components/RequireAuth'; 
 import styles from './layout.module.css';
 
-// Create context
+
 const FinanceContext = createContext();
 
 export function FinanceProvider({ children }) {
@@ -15,7 +15,7 @@ export function FinanceProvider({ children }) {
   const [totalBudget, setTotalBudget] = useState(0);
 
   useEffect(() => {
-    // Load defaults every time (on mount/refresh)
+    
     const defaultTransactions = [
       { id: '1', date: '2025-07-01', category: 'Income', amount: 2000 }, // Salary income
       { id: '2', date: '2025-07-03', category: 'Groceries', amount: -120 },
@@ -35,15 +35,15 @@ export function FinanceProvider({ children }) {
   }, []); // Runs on every mount
   
 
-  // Functions to update in-memory only (no saving)
+
   const updateTransactions = (newTransactions) => {
     setTransactions(newTransactions);
-    // No save here—changes will reset on refresh
+   
   };
 
   const updateTotalBudget = (newBudget) => {
     setTotalBudget(newBudget);
-    // No save here
+   
   };
 
   return (
@@ -53,7 +53,7 @@ export function FinanceProvider({ children }) {
   );
 }
 
-// Custom hook for easy access in other components/pages
+
 export function useFinance() {
   return useContext(FinanceContext);
 }

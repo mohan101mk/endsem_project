@@ -14,6 +14,6 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background: #f4f8fb; /* very light blue background for main content */
+    background: hsl(0, 0%, 98%); /* very light blue background for main content */
     width: 100%;
   }

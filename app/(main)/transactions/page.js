@@ -1,10 +1,10 @@
-// app/(main)/transactions/page.js
+
 'use client';
 
 import { useState } from 'react';
-import { useFinance } from '../layout'; // Adjust path if needed
+import { useFinance } from '../layout'; 
 import RequireAuth from '../../components/RequireAuth';
-import styles from './Transactions.module.css'; // Adjust path to your CSS file
+import styles from './Transactions.module.css'; 
 
 export default function TransactionsPage() {
   const { transactions, updateTransactions } = useFinance();
@@ -12,10 +12,8 @@ export default function TransactionsPage() {
   const [editingId, setEditingId] = useState(null);
   const [editValues, setEditValues] = useState({ date: '', category: '', amount: '' });
 
-  // Sort transactions recent-first
   const sortedTransactions = [...transactions].sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  // Handle add form submit
   const handleAdd = (e) => {
     e.preventDefault();
     if (!newTransaction.date || !newTransaction.category || !newTransaction.amount) return;
@@ -24,13 +22,12 @@ export default function TransactionsPage() {
     setNewTransaction({ date: '', category: '', amount: '' });
   };
 
-  // Start editing
   const startEdit = (t) => {
     setEditingId(t.id);
     setEditValues({ date: t.date, category: t.category, amount: t.amount });
   };
 
-  // Handle edit submit
+
   const handleEdit = (e) => {
     e.preventDefault();
     const updated = transactions.map(t =>
@@ -45,7 +42,7 @@ export default function TransactionsPage() {
       <div className={styles.container}>
         <h1 className={styles.title}>Transactions</h1>
 
-        {/* Add Form */}
+        
         <form onSubmit={handleAdd} className={styles.addForm}>
           <div className={styles.formGroup}>
             <input
@@ -66,7 +63,10 @@ export default function TransactionsPage() {
               <option value="Groceries">Groceries</option>
               <option value="Utilities">Utilities</option>
               <option value="Entertainment">Entertainment</option>
-              {/* Add more options as needed */}
+              <option value="Transport">Transport</option>
+              <option value="Dining">Dining</option>
+              <option value="Other">Other</option>
+              
             </select>
             <input
               type="number"
@@ -80,7 +80,7 @@ export default function TransactionsPage() {
           </div>
         </form>
 
-        {/* Transactions List */}
+        
         <ul className={styles.transactionList}>
           {sortedTransactions.map(t => (
             <li key={t.id} className={styles.transactionItem}>
